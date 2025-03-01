@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Bot, Car, CreditCard, Users, Wrench } from "lucide-react";
+import { Bot, Car, CreditCard } from "lucide-react";
 import { CardPromo } from "@/components/Promo/CardPromo";
-import CardProsesPembayaran from "@/components/CardProsesPembayaran";
+
 import { BerandaCardMobil } from "@/components/Mobil/BerandaCardMobil";
 
 import { Metadata } from "next";
@@ -55,38 +55,31 @@ export default function Home() {
         className="container max-w-5xl mx-auto md:py-16 lg:py-20 h-screen"
       >
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 mx-1">
-          <div className="">
+          <div className="w-1/2 mx-auto lg:w-1/3">
             <Image
-              src="/images/pt.png"
-              width={1000}
-              height={400}
-              loading="lazy"
-              alt="pt"
-              className="mx-auto overflow-hidden object-cover object-center rounded-br-xl rounded-tl-xl"
-            />
-            {/* <Image
               src={"/images/profile.png"}
               width={280}
               height={280}
               loading="lazy"
               alt="image"
               className="mx-auto aspect-square overflow-hidden object-cover object-center rounded-full border-2 border-red-500"
-            /> */}
+            />
           </div>
           <div className="max-w-7xl w-full px-2 mx-auto">
             <div className="space-y-1 mb-2 flex flex-col">
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter ">
-                <span className="text-red-500"> Toyota</span>
+                <span className="text-red-500">Viona Toyota</span>
               </h1>
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter">
                 Rantauprapat
               </h1>
             </div>
             <p className="max-w-[600px] lg:text-lg  text-gray-500 font-light dark:text-gray-400">
-              Selamat datang di dealer Resmi Toyota Rantauprapat . Tersedia
-              beragam kebutuhan serta promo maupun fasilitas pembayaran secara
-              kredit dan tunai. Dapatkan juga layanan purna jual seperti servis
-              mobil dan penjualan part Toyota.
+              Halo! Perkenalkan saya Viona Pakpahan, seorang sales executive
+              yang penuh semangat di Auto2000 Rantauprapat. Saya senang membantu
+              pelanggan menemukan mobil Toyota yang sempurna untuk kebutuhan
+              mereka. Saya memiliki kepribadian yang ramah dan mudah bergaul,
+              dan selalu siap untuk menjawab pertanyaan dan memberikan saran.
             </p>
             <div className="space-x-4 mt-2">
               <PhoneContact />
@@ -111,7 +104,7 @@ export default function Home() {
         className="max-w-8xl w-full mt-24 px-4 md:px-16 mx-auto"
       >
         <h2 className="text-2xl font-semibold">Menyediakan</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+        <div className="gap-6 mt-6 flex justify-between flex-col md:flex-row">
           <div className="p-6 border rounded-lg hover:shadow-lg transition-shadow">
             <Car className="h-8 w-8 text-red-500 mb-3" />
             <h3 className="text-lg font-semibold mb-2">Mobil</h3>
@@ -121,32 +114,6 @@ export default function Home() {
             <Link
               className="text-red-500 underline hover:opacity-50 flex justify-end w-full"
               href={"/mobil"}
-            >
-              kunjungi
-            </Link>
-          </div>
-          <div className="p-6 border rounded-lg hover:shadow-lg transition-shadow">
-            <Wrench className="h-8 w-8 text-red-500 mb-3" />
-            <h3 className="text-lg font-semibold mb-2">Layanan</h3>
-            <p className="text-gray-500">
-              Layanan servis berkualitas dan penjualan suku cadang asli Toyota
-            </p>
-            <Link
-              className="text-red-500 underline hover:opacity-50 flex justify-end w-full"
-              href={"/layanan"}
-            >
-              kunjungi
-            </Link>
-          </div>
-          <div className="p-6 border rounded-lg hover:shadow-lg transition-shadow">
-            <Users className="h-8 w-8 text-red-500 mb-3" />
-            <h3 className="text-lg font-semibold mb-2">Sales</h3>
-            <p className="text-gray-500">
-              Tim sales profesional siap membantu pembelian mobil impian Anda
-            </p>
-            <Link
-              className="text-red-500 underline hover:opacity-50 flex justify-end w-full"
-              href={"/sales"}
             >
               kunjungi
             </Link>
@@ -181,22 +148,6 @@ export default function Home() {
         <h2 className="text-2xl font-semibold">Mobil</h2>
         <BerandaCardMobil />
       </section>
-
-      {/* standart pembayaran */}
-      <section
-        className="max-w-8xl w-full mt-10 px-4 md:px-16 mx-auto"
-        id="pembayaran"
-      >
-        <CardProsesPembayaran />
-      </section>
-
-      <div className="max-w-7xl w-full mt-4 px-8 md:px-32 text-center mx-auto text-gray-500">
-        <span className="text-red-500">*</span> Toyota Rantauprapat tidak
-        bertanggung jawab jika pembayaran tanpa kuintansi resmi PT. ASTRA
-        INTERNATIONAL Tbk. dan atau transfer ditunjukkan ke rekening pribadi
-        Sales/Oknum
-        <hr className="mt-4" />
-      </div>
 
       {/* Review */}
       <section

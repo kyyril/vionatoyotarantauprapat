@@ -8,7 +8,7 @@ interface PhoneContactProps {
   phoneNumber?: string;
 }
 
-function PhoneContact({ phoneNumber = "(0624)2602000" }: PhoneContactProps) {
+function PhoneContact({ phoneNumber = "081260671163" }: PhoneContactProps) {
   const { toast } = useToast();
 
   const handlePhoneClick = () => {

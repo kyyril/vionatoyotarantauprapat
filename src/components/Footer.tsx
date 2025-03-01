@@ -13,8 +13,7 @@ const Footer = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Mobil", href: "/mobil" },
-    { name: "Layanan", href: "/layanan" },
-    { name: "Sales", href: "/sales" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Rekomendasi AI", href: "/rekomendasi-ai" },
   ];
 

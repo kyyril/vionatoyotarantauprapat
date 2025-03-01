@@ -10,8 +10,7 @@ import { useEffect } from "react";
 export const navigationItems = [
   { name: "Beranda", href: "/", icon: Home },
   { name: "Mobil", href: "/mobil", icon: Car },
-  { name: "Layanan", href: "/layanan", icon: Wrench },
-  { name: "Sales", href: "/sales", icon: Users },
+  { name: "Gallery", href: "/gallery", icon: Car },
   { name: "Mobil AI", href: "/rekomendasi-ai", icon: Bot },
 ];
 

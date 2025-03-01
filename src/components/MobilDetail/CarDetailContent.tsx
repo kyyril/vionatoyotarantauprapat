@@ -23,40 +23,12 @@ interface CarDetailContentProps {
 }
 
 export default function CarDetailContent({ mobil }: CarDetailContentProps) {
-  const [salesList, setSalesList] = useState<Sales[]>([]);
-  const [selectedSales, setSelectedSales] = useState<Sales | null>();
-
-  // Update the fetch function
-  useEffect(() => {
-    async function fetchSalesData() {
-      try {
-        const data = await fetchSales();
-        setSalesList(data || []);
-      } catch (error) {
-        console.error("Error fetching sales data:", error);
-      }
-    }
-    fetchSalesData();
-  }, []);
-
   // Update WhatsApp click handler
   const handleWhatsAppClick = () => {
-    if (!selectedSales) {
-      toast({
-        title: "Pilih Sales",
-        description: "Silakan pilih sales terlebih dahulu",
-        variant: "destructive",
-      });
-      return;
-    }
-
     const message = encodeURIComponent(
-      `Halo ${selectedSales.nama}, saya tertarik dengan ${mobil.nama}, tipe (${selectedType}). Bisa berikan informasi lebih lanjut?`
+      `Halo, saya tertarik dengan ${mobil.nama}, tipe (${selectedType}). Bisa berikan informasi lebih lanjut?`
     );
-    window.open(
-      `https://wa.me/62${selectedSales.nohp}?text=${message}`,
-      "_blank"
-    );
+    window.open(`https://wa.me/6281260671163?text=${message}`, "_blank");
   };
 
   const parseArray = (value: any) => {
@@ -150,27 +122,6 @@ export default function CarDetailContent({ mobil }: CarDetailContentProps) {
               <PhoneCall className="text-red-500 group-hover:translate-x-1 transition-transform" />{" "}
               Hubungi Kami
             </Button>
-            {/* sales selected */}
-            <Select
-              value={selectedSales?.nama || ""}
-              onValueChange={(value) => {
-                const selected = salesList.find((s) => s.nama === value);
-                setSelectedSales(selected || null);
-              }}
-            >
-              <SelectTrigger className="">
-                <SelectValue
-                  placeholder={selectedSales?.nama || "Pilih Sales"}
-                />
-              </SelectTrigger>
-              <SelectContent>
-                {salesList.map((sales) => (
-                  <SelectItem key={sales.id} value={sales.nama}>
-                    {sales.nama}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
           </div>
         </section>
       </div>
