@@ -13,20 +13,21 @@ function PhoneContact({ phoneNumber = "081260671163" }: PhoneContactProps) {
 
   const handlePhoneClick = () => {
     try {
-      // Remove any non-numeric characters except +
-      const formattedNumber = phoneNumber.replace(/[^\d+]/g, "");
-      window.location.href = `tel:${formattedNumber}`;
+      const message = encodeURIComponent(
+        `Halo!, saya dari website VionaToyotaRantauprapat.`
+      );
+      window.open(`https://wa.me/6281260671163?text=${message}`, "_blank");
 
       toast({
         title: "Menghubungi",
-        description: "Membuka aplikasi telepon...",
+        description: "Membuka aplikasi whatsapp...",
         duration: 3000,
       });
     } catch (error) {
       toast({
         variant: "destructive",
         title: "Gagal",
-        description: "Tidak dapat membuka aplikasi telepon",
+        description: "Tidak dapat membuka aplikasi whatsapp",
         duration: 3000,
       });
     }

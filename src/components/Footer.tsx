@@ -1,15 +1,9 @@
-import { InstagramIcon } from "lucide-react";
+import { FacebookIcon, InstagramIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import ContactDialog from "./FormContact";
 
 const Footer = () => {
-  const officeHours = [
-    "Senin - Jumat : 08:00 - 17:00",
-    "Sabtu : 08:00 - 16:00",
-    "Minggu & Tanggal Merah : TUTUP",
-  ];
-
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Mobil", href: "/mobil" },
@@ -20,16 +14,22 @@ const Footer = () => {
   const socialMedia = [
     {
       name: "Instagram",
-      href: "https://www.instagram.com/auto2000_rantauprapat?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      href: "https://www.instagram.com/viona_elisa",
       icon: InstagramIcon,
       color: "text-pink-600",
+    },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/profile.php?id=61555485359987#",
+      icon: FacebookIcon,
+      color: "text-blue-500",
     },
   ];
 
   return (
     <footer className="bg-primary-foreground w-full mt-24">
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Logo & Description */}
           <div className="flex flex-col items-center md:items-start space-y-2">
             <div className="relative w-40 h-20">
@@ -41,10 +41,10 @@ const Footer = () => {
                 priority
               />
             </div>
-            <h2 className="text-xl font-bold">Toyota Rantauprapat</h2>
+            <h2 className="text-xl font-bold">VionaToyota Rantauprapat</h2>
             <p className="text-sm text-gray-500 text-center md:text-left">
-              Toyota Rantauprapat: Beli Mobil Impian Jadi Lebih Mudah, Proses
-              Cepat, Angsuran Ringan, dan Pelayanan Purna Jual Terjamin.
+              Beli Mobil Impian Jadi Lebih Mudah, Proses Cepat, Angsuran Ringan,
+              dan Pelayanan Purna Jual Terjamin.
             </p>
           </div>
 
@@ -85,20 +85,6 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
-          </div>
-
-          {/* Office Hours */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold text-red-500 text-center md:text-left">
-              Jam Operasional
-            </h3>
-            <ul className="space-y-2">
-              {officeHours.map((hour, index) => (
-                <li key={index} className="text-sm text-center md:text-left">
-                  {hour}
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
