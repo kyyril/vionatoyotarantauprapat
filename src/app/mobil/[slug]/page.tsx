@@ -13,20 +13,20 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
-  const title = `Mobil ${slug} | Toyota Labuhanbatu`;
-  const description = `Dapatkan informasi lengkap tentang Toyota ${slug} di Toyota Auto 2000 Labuhanbatu. Spesifikasi, harga OTR terbaru, promo, dan paket kredit terbaik untuk Anda. Hubungi sales Toyota terdekat sekarang!`;
+  const title = `Mobil ${slug} | Toyota Viona Labuhanbatu Rantauprapat`;
+  const description = `Dapatkan informasi lengkap tentang Toyota ${slug} di Toyota Viona Labuhanbatu Rantauprapat. Spesifikasi, harga OTR terbaru, promo, dan paket kredit terbaik untuk Anda. Hubungi sales Toyota terdekat sekarang!`;
 
   return {
     title: {
       default: title,
-      template: `%s | Dealer Resmi Toyota Labuhanbatu Rantauprapat`,
+      template: `%s | Dealer Resmi Toyota Viona Labuhanbatu Rantauprapat`,
     },
     description,
     openGraph: {
       title,
       description,
-      url: `https://www.toyotarantauprapat.com/mobil/${slug}`,
-      siteName: "Toyota Labuhanbatu",
+      url: `https://www.toyotarantauprapatviona.com/mobil/${slug}/`,
+      siteName: "Toyota Viona Labuhanbatu Rantauprapat",
       locale: "id_ID",
       type: "article",
     },
@@ -47,15 +47,15 @@ export async function generateMetadata({
       },
     },
     alternates: {
-      canonical: `https://www.toyotarantauprapat.com/mobil/${slug}`,
+      canonical: `https://www.toyotarantauprapatviona.com/${slug}/`,
     },
     keywords: `toyota ${slug}, harga toyota ${slug}, kredit toyota ${slug}, promo toyota ${slug}, spesifikasi toyota ${slug}, dealer toyota labuhanbatu, mobil toyota terbaru, sales toyota labuhanbatu`,
     verification: {
       google: "24f9cc081f9ae37b",
     },
-    authors: [{ name: "Toyota Labuhanbatu" }],
+    authors: [{ name: "Toyota Viona Labuhanbatu Rantauprapat" }],
     category: "Automotive",
-    metadataBase: new URL("https://www.toyotarantauprapat.com/mobil"),
+    metadataBase: new URL("https://www.toyotarantauprapatviona.com/mobil/"),
   };
 }
 

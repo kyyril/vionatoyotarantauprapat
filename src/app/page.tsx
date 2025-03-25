@@ -10,21 +10,21 @@ import Link from "next/link";
 import ReviewCarousel from "@/components/ReviewCarousel";
 
 export const metadata: Metadata = {
-  title: "Toyota Rantauprapat | Dealer Resmi Toyota",
+  title: "Toyota Viona Rantauprapat | Sales Resmi Toyota",
   description:
-    "Dealer Resmi Toyota Rantauprapat - Layanan penjualan mobil Toyota baru, servis, dan sparepart. Dapatkan promo menarik dan fasilitas pembayaran kredit maupun tunai.",
+    "Sales Resmi Toyota Rantauprapat - Layanan penjualan mobil Toyota baru, servis, dan sparepart. Dapatkan promo menarik dan fasilitas pembayaran kredit maupun tunai.",
   keywords:
-    "toyota rantauprapat, dealer toyota, mobil toyota, servis toyota, sparepart toyota, kredit toyota",
+    "toyota rantauprapat, Sales toyota, mobil toyota, servis toyota, sparepart toyota, kredit toyota",
   openGraph: {
-    title: "Toyota Rantauprapat | Dealer Resmi Toyota",
+    title: "Toyota Rantauprapat | Sales Resmi Toyota",
     description:
-      "Dealer Resmi Toyota Rantauprapat - Layanan penjualan mobil Toyota baru, servis, dan sparepart.",
+      "Sales Resmi Toyota Rantauprapat - Layanan penjualan mobil Toyota baru, servis, dan sparepart.",
     images: [
       {
-        url: "/images/pt.png",
+        url: "/images/profile.png",
         width: 1200,
         height: 630,
-        alt: "Toyota Rantauprapat",
+        alt: "Toyota Viona Rantauprapat",
       },
     ],
     locale: "id_ID",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     },
   },
 
-  // verification: {
-  //   google: "your-google-verification-code", // Add your Google verification code
-  // },
+  verification: {
+    google: "google24f9cc081f9ae37b.html", // Add your Google verification code
+  },
 };
 
 export default function Home() {
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="max-w-7xl w-full px-2 mx-auto">
             <div className="space-y-1 mb-2 flex flex-col">
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter ">
-                <span className="text-red-500">Viona Toyota</span>
+                <span className="text-red-500">Toyota Viona</span>
               </h1>
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter">
                 Rantauprapat

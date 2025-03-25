@@ -3,33 +3,33 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Mobil Toyota Terbaru | Toyota Rantauprapat",
-    template: "%s | Toyota Rantauprapat",
+    default: "Mobil Toyota Terbaru | Toyota Viona Rantauprapat",
+    template: "%s | Toyota Viona Rantauprapat",
   },
   description:
     "Jelajahi koleksi lengkap mobil Toyota terbaru di Rantauprapat. Dapatkan informasi harga, spesifikasi, dan promo untuk MPV, SUV, hatchback, dan sedan Toyota. Tersedia Avanza, Innova, Rush, Fortuner, dan lainnya.",
   keywords:
     "mobil toyota rantauprapat, harga mobil toyota, dealer toyota labuhanbatu, jual mobil toyota, toyota mpv, toyota suv, avanza, innova, rush, fortuner, raize, yaris",
   openGraph: {
-    title: "Mobil Toyota Terbaru 2025 | Toyota Rantauprapat",
+    title: "Mobil Toyota Terbaru 2025 | Toyota Viona Rantauprapat",
     description:
       "Koleksi lengkap mobil Toyota terbaru dengan harga terbaik. Tersedia MPV, SUV, hatchback, dan sedan Toyota di Rantauprapat dan sekitarnya.",
-    url: "https://toyotarantauprapat.com/mobil",
+    url: "https://www.toyotarantauprapatviona.com/mobil/",
     siteName: "Toyota Rantauprapat",
     locale: "id_ID",
     type: "website",
     images: [
       {
-        url: "/images/pt.png",
+        url: "/images/profile.png",
         width: 1200,
         height: 630,
-        alt: "Toyota Rantauprapat Showroom",
+        alt: "Toyota Viona Rantauprapat",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Harga Mobil Toyota Terbaru 2025 | Toyota Rantauprapat",
+    title: "Harga Mobil Toyota Terbaru 2025 | Toyota Viona Rantauprapat",
     description:
       "Koleksi lengkap mobil Toyota terbaru dengan harga terbaik di Rantauprapat",
     images: ["/images/pt.png"],
@@ -45,14 +45,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://www.toyotarantauprapat.com/mobil",
-  },
-  authors: [{ name: "Toyota Rantauprapat" }],
+  authors: [{ name: "Toyota Viona Rantauprapat" }],
   category: "Automotive",
-  verification: {
-    google: "24f9cc081f9ae37b",
-  },
 };
 
 const MobilPage = async () => {

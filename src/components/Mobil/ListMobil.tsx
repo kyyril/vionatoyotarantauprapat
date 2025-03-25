@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
+import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import MobilCard from "./MobilCard";
 import {
@@ -13,6 +13,21 @@ import {
 } from "../ui/select";
 import { useMobilStore } from "@/lib/store/useCarStore";
 import { MobilListSkeleton } from "./MobilListSkeleton";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 },
+};
 
 const ListMobil = () => {
   const { cars, isLoading, fetchCars } = useMobilStore();
@@ -86,10 +101,18 @@ const ListMobil = () => {
     return <div className="text-center p-4">Tidak ada data mobil tersedia</div>;
   }
 
-  // Keep existing return statement and UI code
+  // Update the return statement with animations
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex flex-wrap justify-between items-center mb-4 gap-4">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="container mx-auto p-4"
+    >
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="flex flex-wrap justify-between items-center mb-4 gap-4"
+      >
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -118,13 +141,30 @@ const ListMobil = () => {
             ))}
           </SelectContent>
         </Select>
-      </div>
+      </motion.div>
 
       {filteredAndGroupedData.length > 0 ? (
         filteredAndGroupedData.map(([category, mobils]) => (
-          <div key={category} className="mb-6">
-            <h2 className="text-2xl font-bold mb-4">{category}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <motion.div
+            key={category}
+            className="mb-6"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
+            <motion.h2
+              className="text-2xl font-bold mb-4"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+            >
+              {category}
+            </motion.h2>
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+              variants={container}
+              initial="hidden"
+              animate="show"
+            >
               {mobils
                 .filter((mob) =>
                   mob.nama.toLowerCase().includes(query.toLowerCase())
@@ -137,22 +177,32 @@ const ListMobil = () => {
                     : hargaB - hargaA;
                 })
                 .map((mob) => (
-                  <MobilCard
+                  <motion.div
                     key={mob.id}
-                    mobil={mob}
-                    query={query}
-                    getLowestPrice={getLowestPrice}
-                  />
+                    variants={item}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <MobilCard
+                      mobil={mob}
+                      query={query}
+                      getLowestPrice={getLowestPrice}
+                    />
+                  </motion.div>
                 ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))
       ) : (
-        <div className="text-center p-4">
+        <motion.div
+          className="text-center p-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
           Tidak ada mobil yang sesuai dengan filter
-        </div>
+        </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

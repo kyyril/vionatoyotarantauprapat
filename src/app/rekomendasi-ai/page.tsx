@@ -2,13 +2,13 @@ import React from "react";
 import Hero from "./_components/Hero";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Rekomendasi Mobil AI | Toyota Rantauprapat",
+  title: "Rekomendasi Mobil AI | Toyota Viona Labuhanbatu Rantauprapat",
   description:
     "Dapatkan rekomendasi mobil Toyota yang sesuai dengan kebutuhan Anda menggunakan teknologi AI. Temukan mobil impian Anda dengan bantuan sistem rekomendasi pintar kami.",
   keywords:
     "rekomendasi mobil toyota, ai toyota, mobil toyota sesuai kebutuhan, sistem rekomendasi mobil, toyota rantauprapat",
   openGraph: {
-    title: "Rekomendasi Mobil AI Toyota Rantauprapat",
+    title: "Rekomendasi Mobil AI Toyota Viona Rantauprapat",
     description: "Temukan mobil Toyota yang tepat untuk Anda dengan bantuan AI",
     locale: "id_ID",
     type: "website",
@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.toyotarantauprapat.com/rekomendasi-ai",
+    canonical: "https://www.toyotarantauprapatviona.com/rekomendasi-ai/",
   },
-  authors: [{ name: "Toyota Rantauprapat" }],
+  authors: [{ name: "Toyota Viona Rantauprapat" }],
   category: "Automotive",
   verification: {
-    google: "24f9cc081f9ae37b",
+    google: "google24f9cc081f9ae37b.html",
   },
 };
 
