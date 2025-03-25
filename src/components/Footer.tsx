@@ -69,7 +69,7 @@ const Footer = () => {
           {/* Social Media */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-red-500 text-center md:text-left">
-              Ikuti Kami
+              Ikuti Saya
             </h3>
             <div className="flex flex-col space-y-2">
               {socialMedia.map((item) => (
@@ -91,8 +91,8 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-500 text-center">
-            &copy; {new Date().getFullYear()} Toyota Rantauprapat. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Toyota Viona Rantauprapat. All
+            rights reserved.
           </p>
         </div>
       </div>
